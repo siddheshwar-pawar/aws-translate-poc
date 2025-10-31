@@ -4,6 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import software.amazon.awssdk.services.translate.model.Formality;
 
 @Data
 public class TranslateRequestDTO {
@@ -22,9 +23,6 @@ public class TranslateRequestDTO {
     @Setter
     @Getter
     public static class Settings {
-        private String formality; // e.g., FORMAL or INFORMAL
-
+        private Formality formality;
     }
-
 }
-

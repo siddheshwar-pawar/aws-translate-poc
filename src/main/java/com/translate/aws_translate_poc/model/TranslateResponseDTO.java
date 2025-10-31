@@ -20,9 +20,6 @@ public class TranslateResponseDTO {
     @Getter
     @AllArgsConstructor
     public static class AppliedSettings {
-        private String formality;
-
-        public AppliedSettings(Formality formality) {
-        }
+        private Formality formality;
     }
 }
