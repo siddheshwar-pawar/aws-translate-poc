@@ -1,0 +1,37 @@
+
+### Multiple Texts Translation (New Batch Endpoint)
+POST http://localhost:8081/api/translate/batch
+Content-Type: application/json
+
+{
+  "texts": ["Good Morning", "Thank you very much", "How are you?", "Welcome to our service"],
+  "sourceLanguageCode": "en",
+  "targetLanguageCode": "de",
+  "settings": {
+    "formality": "FORMAL"
+  }
+}
+
+### Batch Translation without Formality Settings
+POST http://localhost:8081/api/translate/batch
+Content-Type: application/json
+
+{
+  "texts": ["Hello", "World", "Good day"],
+  "sourceLanguageCode": "en",
+  "targetLanguageCode": "fr"
+}
+
+### Batch Translation to Spanish
+POST http://localhost:8081/api/translate/batch
+Content-Type: application/json
+
+{
+  "texts": ["Good morning", "Good afternoon", "Good evening", "Good night"],
+  "sourceLanguageCode": "en",
+  "targetLanguageCode": "es",
+  "settings": {
+    "formality": "INFORMAL"
+  }
+}
+
